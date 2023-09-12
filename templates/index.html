@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello from Flask</title>
+</head>
+<body>
+
+<!-- condition in Flask -->
+{% if name %} 
+  <h1>Hello {{ name }}!</h1>
+  <h3 class="mt-5">Live Streaming</h3>
+  <!-- set url to load the video streaming from video_feed -->
+  <img src="{{ url_for('video_feed') }}" width="50%" alt="live streaming video">
+{% else %}
+  <h1>Hello World</h1>
+{% endif %}
+
+</body>
+</html>
